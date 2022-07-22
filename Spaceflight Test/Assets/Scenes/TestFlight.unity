@@ -800,7 +800,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
     m_ActionId: bf4083c2-9a67-45df-a5a1-3b3a2b56bae7
     m_ActionName: Ship Controls/Thrust (LT)[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
@@ -833,8 +833,8 @@ Rigidbody:
   m_GameObject: {fileID: 1390566284}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
+  m_Drag: 0.2
+  m_AngularDrag: 0.5
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -852,17 +852,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011d372a56426624b92682facba12ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yawTorque: 500
-  pitchTorque: 1000
-  rollTorque: 1000
-  thrust: 100
+  yawTorque: 250
+  pitchTorque: 250
+  rollTorque: 100
+  thrust: 300
   upThrust: 50
   strafeThrust: 50
-  thrustGlideReduction: 0.999
+  thrustGlideReduction: 0.5
   upDownGlideReduction: 0.111
   leftRightGlideReduction: 0.111
-  pitchYaw1D: 0
+  thrust1D: 0
   landingMode: 0
+  glide: 0
 --- !u!1 &1636753044
 GameObject:
   m_ObjectHideFlags: 0

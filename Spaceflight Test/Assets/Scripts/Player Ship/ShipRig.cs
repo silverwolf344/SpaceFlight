@@ -28,15 +28,17 @@ public class ShipRig : MonoBehaviour {
 
     Rigidbody rb;
     // Input Values
+    [SerializeField]
     private float thrust1D;
     private float upDown1D;
     private float strafe1D;
     private float roll1D;
-    [SerializeField]
     private float pitchYaw1D;
     [SerializeField]
     private bool landingMode = false;
     private float thrustStrafe1D;
+    [SerializeField]
+    private float glide = 0f;
     
     
     void Start(){
@@ -53,12 +55,18 @@ public class ShipRig : MonoBehaviour {
         // Roll
         rb.AddRelativeTorque(Vector3.back * roll1D * rollTorque * Time.deltaTime);
         // Pitch -- up down, invert pitchYaw1D here to invert y axis controls :)
-        rb.AddRelativeTorque(Vector3.right * Mathf.Clamp(pitchYaw1D, -1f, 1f) * pitchTorque * Time.deltaTime);
+        rb.AddRelativeTorque(Vector3.right * Mathf.Clamp(-pitchYaw1D, -1f, 1f) * pitchTorque * Time.deltaTime);
 
         // Thrusters
         if (thrust1D > 0.1f || thrust1D < -0.1f)
         {
-            float currentThrust;
+            float currentThrust = thrust;
+            rb.AddRelativeForce(Vector3.forward * thrust1D * currentThrust * Time.deltaTime);
+            glide = thrust;
+        } else {
+            // Once thrust buttom has stopped being pressed, over time, reduce forward momentum to 0
+            rb.AddRelativeForce(Vector3.forward * glide * Time.deltaTime);
+            glide *= thrustGlideReduction;
         }
     }
 
