@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Activate SubLight",
+                    "type": "PassThrough",
+                    "id": "e5906e60-069a-4670-ba84-b8afd0d88476",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -262,6 +271,28 @@
                     "action": "PitchYaw",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "b5f00bed-3579-4e83-b101-4baed51b4be4",
+                    "path": "<Keyboard>/f",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Activate SubLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48104d90-ec4b-42f1-ba6f-671320e51168",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Activate SubLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
