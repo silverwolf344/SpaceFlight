@@ -882,6 +882,7 @@ GameObject:
   - component: {fileID: 1390566288}
   - component: {fileID: 1390566287}
   - component: {fileID: 1390566286}
+  - component: {fileID: 1390566289}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -1072,7 +1073,7 @@ Rigidbody:
   m_GameObject: {fileID: 1390566284}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
+  m_Drag: 0.6
   m_AngularDrag: 0.5
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -1092,7 +1093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawTorque: 250
-  pitchTorque: 250
+  pitchTorque: 100
   rollTorque: 100
   thrust: 500
   upThrust: 50
@@ -1101,6 +1102,20 @@ MonoBehaviour:
   upDownGlideReduction: 0.111
   strafeGlideReduction: 0.111
   thrust1D: 0
+--- !u!136 &1390566289
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390566284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.14
+  m_Height: 0.69
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.06, z: 0}
 --- !u!1001 &1435001380
 PrefabInstance:
   m_ObjectHideFlags: 0

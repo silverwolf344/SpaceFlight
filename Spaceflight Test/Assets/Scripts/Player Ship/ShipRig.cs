@@ -62,7 +62,7 @@ public class ShipRig : MonoBehaviour {
         {
             float currentThrust = thrust;
             rb.AddRelativeForce(Vector3.forward * thrust1D * currentThrust * Time.deltaTime);
-            glide = thrust;
+            glide *= thrust * thrust1D;
         } else if (glide != 0f)
         {
             // Once thrust buttom has stopped being pressed, over time, reduce forward momentum to 0
