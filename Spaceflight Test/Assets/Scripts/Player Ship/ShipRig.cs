@@ -24,7 +24,7 @@ public class ShipRig : MonoBehaviour {
     [SerializeField, Range(0.001f, 0.999f)]
     private float upDownGlideReduction = 0.111f;
     [SerializeField, Range(0.001f, 0.999f)]
-    private float leftRightGlideReduction = 0.111f;
+    private float strafeGlideReduction = 0.111f;
 
     Rigidbody rb;
     PlayerInput playerInput;
@@ -35,12 +35,10 @@ public class ShipRig : MonoBehaviour {
     private float strafe1D;
     private float roll1D;
     private float pitchYaw1D;
-    [SerializeField]
-    private bool landingMode = false;
     private float thrustStrafe1D;
-    [SerializeField]
     private float glide = 0f;
-
+    private float upDownGlide = 0f;
+    private float strafeGlide = 0f;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
@@ -65,8 +63,42 @@ public class ShipRig : MonoBehaviour {
             float currentThrust = thrust;
             rb.AddRelativeForce(Vector3.forward * thrust1D * currentThrust * Time.deltaTime);
             glide = thrust;
-        } else {
+        } else if (glide != 0f)
+        {
             // Once thrust buttom has stopped being pressed, over time, reduce forward momentum to 0
+            rb.AddRelativeForce(Vector3.forward * glide * Time.deltaTime);
+            glide *= thrustGlideReduction;
+        }
+        // Landing Mode
+        if (upDown1D > 0.1f || upDown1D < -0.1f)
+        {
+            rb.AddRelativeForce(Vector3.up * upDown1D * upThrust * Time.fixedDeltaTime);
+            upDownGlide *= upDown1D * upThrust;
+        }
+        else if (upDownGlide != 0f)
+        {
+            rb.AddRelativeForce(Vector3.forward * upDownGlide * Time.deltaTime);
+            upDownGlide *= upDownGlideReduction;
+        }
+        // Left / Right
+        if (strafe1D > 0.1f || strafe1D < -0.1f)
+        {
+            rb.AddRelativeForce(Vector3.right * strafe1D * upThrust * Time.fixedDeltaTime);
+            strafeGlide *= strafe1D * upThrust;
+        }
+        else if (strafeGlide != 0f)
+        {
+            rb.AddRelativeForce(Vector3.right * strafeGlide * Time.deltaTime);
+            strafeGlide *= strafeGlideReduction;
+        }
+        // Forward / Back
+        if (thrustStrafe1D > 0.1f || thrustStrafe1D < -0.1f)
+        {
+            rb.AddRelativeForce(Vector3.forward * thrustStrafe1D * strafeThrust * Time.fixedDeltaTime);
+            glide *= thrustStrafe1D * strafeThrust;
+        }
+        else if (glide != 0f)
+        {
             rb.AddRelativeForce(Vector3.forward * glide * Time.deltaTime);
             glide *= thrustGlideReduction;
         }
@@ -77,12 +109,10 @@ public class ShipRig : MonoBehaviour {
         thrust1D = context.ReadValue<float>();
     }
     public void onStrafe(InputAction.CallbackContext context){
-        // Make sure landing mode is engaged, might be inefficient
-        if (landingMode) strafe1D = context.ReadValue<float>();
+        strafe1D = context.ReadValue<float>();
     }
     public void onUpDown(InputAction.CallbackContext context){
-        // Make sure landing mode is engaged
-        if (landingMode) upDown1D = context.ReadValue<float>();
+        upDown1D = context.ReadValue<float>();
     }
     public void onRoll(InputAction.CallbackContext context){
         roll1D = context.ReadValue<float>();
@@ -90,18 +120,8 @@ public class ShipRig : MonoBehaviour {
     public void onPitchYaw(InputAction.CallbackContext context){
         pitchYaw1D = context.ReadValue<float>();
     }
-    /*// May not be nessacary
-    public void onLandingMode(InputAction.CallbackContext context){
-        Debug.Log("L Button Pressed");
-        if (!landingMode)
-        {
-            landingMode = true;
-            playerInput.SwitchCurrentActionMap("Landing Mode");
-        }
-        else playerInput.SwitchCurrentActionMap("Ship Controls");
-    }*/
     public void onThrustLandingMode(InputAction.CallbackContext context){
-        if (landingMode) thrustStrafe1D = context.ReadValue<float>();
+       thrustStrafe1D = context.ReadValue<float>();
     }
     #endregion
 }

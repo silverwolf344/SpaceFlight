@@ -772,15 +772,51 @@ MonoBehaviour:
     m_ActionId: 268a82de-34f9-4052-91ac-3c7b880bd2c6
     m_ActionName: Ship Controls/PitchYaw[/Keyboard/w,/Keyboard/s]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1390566288}
+        m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
+        m_MethodName: onStrafe
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 95ae3460-379c-42dd-9f7e-f54a28acb7c0
     m_ActionName: Landing Mode/Strafe (Left Right LT)[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1390566288}
+        m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
+        m_MethodName: onUpDown
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: acc0f5dc-7899-4732-9502-062eda3d9bd1
     m_ActionName: Landing Mode/UpDown (LT)[/Keyboard/ctrl,/Keyboard/shift]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1390566288}
+        m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
+        m_MethodName: onThrustLandingMode
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 886c9cc9-2e06-4c86-894d-b897a3ffe95d
     m_ActionName: Landing Mode/Thrust (LT)[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
@@ -840,10 +876,8 @@ MonoBehaviour:
   strafeThrust: 50
   thrustGlideReduction: 0.5
   upDownGlideReduction: 0.111
-  leftRightGlideReduction: 0.111
+  strafeGlideReduction: 0.111
   thrust1D: 0
-  landingMode: 0
-  glide: 0
 --- !u!1 &1636753044
 GameObject:
   m_ObjectHideFlags: 0
