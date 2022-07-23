@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.5, z: 0.3}
+  Damping: {x: 0.1, y: 0.1, z: 0.5}
   ShoulderOffset: {x: 0, y: -0.4, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 1
@@ -258,7 +258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539562377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.061, y: 0.155, z: -0.364}
+  m_LocalPosition: {x: 0, y: 0.155, z: -0.364}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1390566285}
@@ -436,7 +436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.61, y: 1.55, z: -5.64}
+  m_LocalPosition: {x: 0, y: 0.775, z: -3.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -675,7 +675,7 @@ Transform:
   m_GameObject: {fileID: 1390566284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 312215134}
   - {fileID: 539562378}
@@ -727,38 +727,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1390566288}
         m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
-        m_MethodName: onStrafe
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 18c92c66-45cd-4011-bdea-69ce7e260fdf
-    m_ActionName: Ship Controls/Strafe (Left Right LT)[/Keyboard/a,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1390566288}
-        m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
-        m_MethodName: onUpDown
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: be5cbdad-14ba-4459-8de7-3b524a4c3151
-    m_ActionName: Ship Controls/UpDown (LT)[/Keyboard/ctrl,/Keyboard/shift]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1390566288}
-        m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
         m_MethodName: onRoll
         m_Mode: 0
         m_Arguments:
@@ -773,36 +741,20 @@ MonoBehaviour:
     m_ActionName: Ship Controls/Roll[/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1390566288}
-        m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
-        m_MethodName: onLandingMode
-        m_Mode: 0
+      - m_Target: {fileID: 1390566286}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+        m_MethodName: SwitchCurrentActionMap
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Landing Mode
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: ff367691-08f2-4b10-8ce2-2ba1beaeea77
     m_ActionName: Ship Controls/Switch To Landing Thrusters Controller[/Keyboard/l]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1390566288}
-        m_TargetAssemblyTypeName: ShipRig, Assembly-CSharp
-        m_MethodName: onThrust
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
-    m_ActionId: bf4083c2-9a67-45df-a5a1-3b3a2b56bae7
-    m_ActionName: Ship Controls/Thrust (LT)[/Keyboard/s,/Keyboard/w]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1390566288}
@@ -819,6 +771,34 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 268a82de-34f9-4052-91ac-3c7b880bd2c6
     m_ActionName: Ship Controls/PitchYaw[/Keyboard/w,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 95ae3460-379c-42dd-9f7e-f54a28acb7c0
+    m_ActionName: Landing Mode/Strafe (Left Right LT)[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: acc0f5dc-7899-4732-9502-062eda3d9bd1
+    m_ActionName: Landing Mode/UpDown (LT)[/Keyboard/ctrl,/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 886c9cc9-2e06-4c86-894d-b897a3ffe95d
+    m_ActionName: Landing Mode/Thrust (LT)[/Keyboard/s,/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1390566286}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+        m_MethodName: SwitchCurrentActionMap
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ship Controls
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 17d3c8f0-517b-41d2-be0d-c85cc0562463
+    m_ActionName: Landing Mode/Ship Controls Switch[/Keyboard/l]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Ship Controls
@@ -1062,7 +1042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023352514}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.61, y: 1.55, z: -5.64}
+  m_LocalPosition: {x: 0, y: 0.775, z: -3.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 498098983}

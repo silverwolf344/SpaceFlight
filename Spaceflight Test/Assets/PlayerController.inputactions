@@ -15,24 +15,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Strafe (Left Right LT)",
-                    "type": "PassThrough",
-                    "id": "18c92c66-45cd-4011-bdea-69ce7e260fdf",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "UpDown (LT)",
-                    "type": "PassThrough",
-                    "id": "be5cbdad-14ba-4459-8de7-3b524a4c3151",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Roll",
                     "type": "PassThrough",
                     "id": "20d8713e-4e65-48ee-85c6-d838aeebf9f2",
@@ -42,21 +24,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Switch To Landing Thrusters Controller",
+                    "name": "Landing Mode Switch",
                     "type": "PassThrough",
                     "id": "ff367691-08f2-4b10-8ce2-2ba1beaeea77",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Thrust (LT)",
-                    "type": "PassThrough",
-                    "id": "bf4083c2-9a67-45df-a5a1-3b3a2b56bae7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
                 },
                 {
@@ -137,138 +110,6 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "StrafeKB",
-                    "id": "a0909954-cbd6-4918-98a0-2f93f01aa86b",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Strafe (Left Right LT)",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "4aba4731-0486-4e5d-a86a-b4e4f5840d33",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Strafe (Left Right LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "f0e62820-1806-4fc6-9913-167efab6a3c4",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Strafe (Left Right LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "StrafeController",
-                    "id": "eb5f3245-eae1-43f0-8e53-68b64e8b6733",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Strafe (Left Right LT)",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "215f80f9-f370-48e2-9dda-9f14959ed7d2",
-                    "path": "<Gamepad>/leftStick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Strafe (Left Right LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "ea79eecf-f5e9-4235-8a2c-ba48d70aa9bf",
-                    "path": "<Gamepad>/leftStick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Strafe (Left Right LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "UpDownKB",
-                    "id": "2e784934-732d-47e4-9757-19879452f6d8",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UpDown (LT)",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "2e60d9a4-db99-406d-97ad-e45ab06763a5",
-                    "path": "<Keyboard>/ctrl",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UpDown (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "10e9b93d-ba23-428f-990f-868da055f0e7",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UpDown (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "UpDownController",
-                    "id": "eb53e82c-1428-458f-88ef-7e3ba5f08489",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UpDown (LT)",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "1b5b4fbe-11ad-4be5-89b4-0d48eba88cd0",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UpDown (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "14ae127f-25e8-4928-a758-61da63993632",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UpDown (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "RollKB",
                     "id": "7776c02d-a325-493c-a1af-d8de6b6a231e",
                     "path": "1DAxis",
@@ -341,7 +182,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Switch To Landing Thrusters Controller",
+                    "action": "Landing Mode Switch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -352,75 +193,9 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Switch To Landing Thrusters Controller",
+                    "action": "Landing Mode Switch",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "Forward-Back KB",
-                    "id": "f40e5e4d-b716-4ed7-8c1f-749123c8c35d",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust (LT)",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "f10053ec-e91e-4557-8e45-8a9e968dcb4e",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "3afd356f-e76e-433d-9770-e5737739af7e",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Forward-Back Controller",
-                    "id": "99c8924d-dd88-485d-95ad-f3b5cfd21857",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust (LT)",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "1ad0f60d-92e6-4b72-8621-58871e66cf4b",
-                    "path": "<Gamepad>/leftStick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "485c8aa0-b471-4fb4-b21e-f7d14c97c3ce",
-                    "path": "<Gamepad>/leftStick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Thrust (LT)",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "PitchYaw KB",
@@ -487,6 +262,270 @@
                     "action": "PitchYaw",
                     "isComposite": false,
                     "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Landing Mode",
+            "id": "fb3a1697-8753-416f-b798-81327c48dcc1",
+            "actions": [
+                {
+                    "name": "Strafe (Left Right)",
+                    "type": "PassThrough",
+                    "id": "95ae3460-379c-42dd-9f7e-f54a28acb7c0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UpDown",
+                    "type": "PassThrough",
+                    "id": "acc0f5dc-7899-4732-9502-062eda3d9bd1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Thrust ",
+                    "type": "PassThrough",
+                    "id": "886c9cc9-2e06-4c86-894d-b897a3ffe95d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ship Controls Switch",
+                    "type": "PassThrough",
+                    "id": "17d3c8f0-517b-41d2-be0d-c85cc0562463",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "StrafeKB",
+                    "id": "dc336c19-191a-4dd8-8567-f7c0c8522a14",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe (Left Right)",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ccd6b3bd-8ad8-465a-a105-3d564a295b6a",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe (Left Right)",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "b930693a-9cb5-40e7-909e-a119f87d8f90",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe (Left Right)",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "StrafeController",
+                    "id": "01a09af7-b675-4046-afad-81146e034037",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe (Left Right)",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "81a46951-8adc-4f65-8d41-132759b6eb62",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe (Left Right)",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "87eaecb1-eb8b-43b8-b807-cd1bc70b8b0b",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe (Left Right)",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "UpDownKB",
+                    "id": "6d27351f-8295-4fa7-b601-607ad69bcdb4",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "a5ad9bd7-293f-4b41-8213-b25836e1644f",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "56325320-245d-4504-ac6b-26fc6a911f19",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "UpDownController",
+                    "id": "e17307fa-2308-4def-92d6-2e01a96272cf",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "e926500c-97cb-465a-b9a1-e95692dd63f5",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ac38c8de-be5f-4e2b-a1c9-45bfa31cece2",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpDown",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Forward-Back KB",
+                    "id": "7ac3d0e9-b850-45a5-b80e-2d0ad8ba81e7",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thrust ",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ac5bc1fc-215d-4d3c-a6c4-c864731e8f4a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thrust ",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ece72bfe-a951-4331-9836-db371f1453b7",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thrust ",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Forward-Back Controller",
+                    "id": "501472e1-ebc9-4df0-870e-51801c4c8c2c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thrust ",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "f388a290-04d1-4a04-9935-e8531b678208",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thrust ",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "fba796eb-f989-49a2-bd0d-a32b80a6a94b",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Thrust ",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "7dc1d5a3-f997-45cd-8808-117b00e0db2d",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ship Controls Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f1227f4e-5ab6-4204-8890-fb3092a2680f",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ship Controls Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

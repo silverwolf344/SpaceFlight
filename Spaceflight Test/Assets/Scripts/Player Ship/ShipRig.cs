@@ -27,6 +27,7 @@ public class ShipRig : MonoBehaviour {
     private float leftRightGlideReduction = 0.111f;
 
     Rigidbody rb;
+    PlayerInput playerInput;
     // Input Values
     [SerializeField]
     private float thrust1D;
@@ -39,18 +40,19 @@ public class ShipRig : MonoBehaviour {
     private float thrustStrafe1D;
     [SerializeField]
     private float glide = 0f;
-    
-    
-    void Start(){
+
+
+    void Start() {
         rb = GetComponent<Rigidbody>();
+        playerInput = GetComponent<PlayerInput>();
 
     }
 
 
-    void FixedUpdate(){
+    void FixedUpdate() {
         HandleMovement();
     }
-
+ 
     void HandleMovement(){
         // Roll
         rb.AddRelativeTorque(Vector3.back * roll1D * rollTorque * Time.deltaTime);
@@ -88,11 +90,16 @@ public class ShipRig : MonoBehaviour {
     public void onPitchYaw(InputAction.CallbackContext context){
         pitchYaw1D = context.ReadValue<float>();
     }
-    // May not be nessacary
+    /*// May not be nessacary
     public void onLandingMode(InputAction.CallbackContext context){
-        landingMode = !landingMode;
-        // trigger UI element ?
-    }
+        Debug.Log("L Button Pressed");
+        if (!landingMode)
+        {
+            landingMode = true;
+            playerInput.SwitchCurrentActionMap("Landing Mode");
+        }
+        else playerInput.SwitchCurrentActionMap("Ship Controls");
+    }*/
     public void onThrustLandingMode(InputAction.CallbackContext context){
         if (landingMode) thrustStrafe1D = context.ReadValue<float>();
     }
