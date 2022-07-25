@@ -1396,7 +1396,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.ArcCircle, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"circle":{"center":{"x":0.0,"y":0.0,"z":0.0},"radius":0.20000000298023225},"arc":6.2831854820251469}'
+      m_SerializableObject: '{"circle":{"center":{"x":0.0,"y":0.0,"z":-1.0700000524520875},"radius":-0.07000000029802323},"arc":6.28000020980835}'
     m_Space: 0
   m_Property:
     name: ArcCircle
@@ -1694,7 +1694,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Sphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"center":{"x":0.0,"y":0.0,"z":-1.0},"radius":4.0}'
+      m_SerializableObject: '{"center":{"x":0.0,"y":0.0,"z":-1.2899999618530274},"radius":4.0}'
     m_Space: 0
   m_Property:
     name: Sphere

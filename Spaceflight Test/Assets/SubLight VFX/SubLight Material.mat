@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Actual Displacement
-  m_Shader: {fileID: -6465566751694194690, guid: 2802144a27ee43848be6e58b7b84919a, type: 3}
+  m_Name: SubLight Material
+  m_Shader: {fileID: -6465566751694194690, guid: ee451bb3c77b89a40bcd196afb5a943a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,8 +19,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_FB963481:
-        m_Texture: {fileID: 2800000, guid: 46c9f1de64abaa94c802ca0dfdabac23, type: 3}
+    - Texture2D_d72bf80a881e49efb74eb64bd3b5dcf6:
+        m_Texture: {fileID: 2800000, guid: 327db9f10a87b414d98a614f8f4c3327, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -36,11 +36,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_61EBFA3A: 0.1
-    - Vector1_AD0282ED: 30
-    - Vector1_FACBA73A: 0.2
+    - Vector1_232919d42a014da78e3d7bd11631b339: 0
+    - Vector1_3fc2970ac3ef4e94b32e02e0ba2612f5: 1.36
     m_Colors:
-    - Color_78919FFB: {r: 1, g: 1, b: 1, a: 0}
-    - Vector2_4B04E98D: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_80AEAA50: {r: 0.04, g: 0, b: 0, a: 0}
+    - Color_6d2c5760e1b4451683bbf7822508c459: {r: 0.28841257, g: 0.28595585, b: 0.9622642, a: 0}
+    - Vector2_2aa6457395e54253852634bbebd16d96: {r: 0.005, g: 0.005, b: 0, a: 0}
+    - Vector2_cfe0253850454db291ddff0334283482: {r: 0, g: -0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
