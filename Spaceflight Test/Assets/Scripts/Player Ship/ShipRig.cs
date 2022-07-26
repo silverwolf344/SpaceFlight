@@ -7,8 +7,8 @@ using UnityEngine.InputSystem;
 public class ShipRig : MonoBehaviour {
 
     [Header("~~Ship Movement Options~~")]
-    [SerializeField]
-    private float yawTorque = 500f;
+    //[SerializeField]
+    //private float yawTorque = 500f;
     [SerializeField]
     private float pitchTorque = 1000f;
     [SerializeField]
